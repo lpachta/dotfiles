@@ -1,0 +1,6 @@
+alias backup='~/my_dotfiles/.config/zshrc/backup.sh'
+
+# Pretty ls
+alias ll='eza -al --icons=always'
+alias la='eza -a --icons=always'
+alias l='eza --icons=always'

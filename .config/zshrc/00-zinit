@@ -1,0 +1,64 @@
+# Enable Powerlevel10k instant prompt
+if [[ ! -f ~/.p10k.zsh ]]; then
+  return
+fi
+
+source ~/.p10k.zsh
+
+# Zsh configuration
+export ZSH_CACHE_DIR="$HOME/.cache/zsh"
+mkdir -p "$ZSH_CACHE_DIR"
+
+# Fast prompt redraw
+autoload -Uz add-zsh-hook
+autoload -Uz vcs_info
+
+# History settings
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+setopt HIST_IGNORE_ALL_DUPS
+setopt SHARE_HISTORY
+setopt INC_APPEND_HISTORY
+
+# Enable vi keybindings
+bindkey -v
+export KEYTIMEOUT=1
+
+# Use arrow-right to accept autosuggestions
+bindkey '^[[C' forward-char        # Right arrow
+bindkey '^[[D' backward-char       # Left arrow
+bindkey '^[[A' up-line-or-history  # Up
+bindkey '^[[B' down-line-or-history # Down
+
+# Completion
+autoload -Uz compinit
+zstyle ':completion:*' menu select
+compinit
+
+# === Zinit plugin manager ===
+source ~/.local/share/zinit/zinit.git/zinit.zsh
+
+# Fast prompt like Starship (optional)
+# zinit ice from"gh-r" as"program" use"starship" pick"starship"
+# zinit light starship/starship
+# eval "$(starship init zsh)"
+
+# Autosuggestions
+zinit light zsh-users/zsh-autosuggestions
+
+# Syntax highlighting (load last!)
+zinit light zsh-users/zsh-syntax-highlighting
+
+# Vim mode
+zinit light jeffreytse/zsh-vi-mode
+
+# Using Zinit (add this to your .zshrc)
+zinit light romkatv/powerlevel10k
+
+# Optional: fzf-tab plugin
+# zinit light Aloxaf/fzf-tab
+
+# Prompt (replace with starship if using it)
+PROMPT='%F{green}%n@%m%f:%F{blue}%~%f %# '
+
