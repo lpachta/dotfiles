@@ -57,7 +57,7 @@ zinit light jeffreytse/zsh-vi-mode
 zinit light romkatv/powerlevel10k
 
 # Optional: fzf-tab plugin
-# zinit light Aloxaf/fzf-tab
+zinit light Aloxaf/fzf-tab
 
 # Prompt (replace with starship if using it)
 PROMPT='%F{green}%n@%m%f:%F{blue}%~%f %# '
