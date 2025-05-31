@@ -1,10 +1,3 @@
-# Enable Powerlevel10k instant prompt
-if [[ ! -f ~/.p10k.zsh ]]; then
-  return
-fi
-
-source ~/.p10k.zsh
-
 # Zsh configuration
 export ZSH_CACHE_DIR="$HOME/.cache/zsh"
 mkdir -p "$ZSH_CACHE_DIR"
@@ -53,8 +46,8 @@ zinit light zsh-users/zsh-syntax-highlighting
 # Vim mode
 zinit light jeffreytse/zsh-vi-mode
 
-# Using Zinit (add this to your .zshrc)
-zinit light romkatv/powerlevel10k
+# Powerlevel10k
+zinit ice depth=1; zinit light romkatv/powerlevel10k
 
 # Optional: fzf-tab plugin
 zinit light Aloxaf/fzf-tab
@@ -62,3 +55,9 @@ zinit light Aloxaf/fzf-tab
 # Prompt (replace with starship if using it)
 PROMPT='%F{green}%n@%m%f:%F{blue}%~%f %# '
 
+# Enable Powerlevel10k instant prompt
+if [[ ! -f ~/.p10k.zsh ]]; then
+  return
+fi
+
+source ~/.p10k.zsh
