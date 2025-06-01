@@ -5,7 +5,7 @@
 If you're using Arch:
 
 ```
-mv -T ~/dotfiles{,.bak}
+rm -rf ~/dotfiles.bak && mv ~/dotfiles{,.bak}
 ```
 
 ```
