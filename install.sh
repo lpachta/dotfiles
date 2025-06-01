@@ -2,11 +2,6 @@ echo "👨‍🔧 Installing packages using pacman..."
 sudo pacman -S kitty ttf-jetbrains-mono-nerd zsh fzf zoxide nvim eza fastfetch
 echo ""
 
-echo "⬇️ Cloning dotfiles into ~/dotfiles..."
-mv ~/dotfiles{,.bak}
-git clone git@github.com:lpachta/dotfiles.git ~/dotfiles
-echo ""
-
 echo "🔗 Linking dotfiles..."
 mv ~/.zshrc{,.bak}
 ln -sf $HOME/dotfiles/.zshrc $HOME/.zshrc
