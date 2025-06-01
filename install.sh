@@ -3,6 +3,7 @@ sudo pacman -S kitty ttf-jetbrains-mono-nerd zsh fzf zoxide nvim eza fastfetch
 echo ""
 
 echo "🔗 Linking dotfiles..."
+rm -rf ~/.p10k.zsh.bak && mv ~/.p10k.zsh{,.bak}
 rm -rf ~/.zshrc.bak && mv ~/.zshrc{,.bak}
 ln -sf $HOME/dotfiles/.zshrc $HOME/.zshrc
 rm -rf ~/.config/zshrc.bak && mv ~/.config/zshrc{,.bak}
