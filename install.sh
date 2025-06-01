@@ -21,4 +21,8 @@ rm -rf ~/.config/nvim/.git
 ln -sf $HOME/dotfiles/.config/nvim/lua/plugins/transparent.lua $HOME/.config/nvim/lua/plugins/transparent.lua
 echo ""
 
-echo "✅ Everything should be set and done."
+echo "Setting Zsh as the default shell..."
+chsh -s $(which zsh)
+echo ""
+
+echo "✅ Everything should be set and done. Now restart the puter."
