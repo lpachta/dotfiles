@@ -13,5 +13,6 @@ git clone git@github.com:lpachta/dotfiles.git ~/dotfiles
 ```
 
 ```
+chmod +x ~/dotfiles/install.sh
 ~/dotfiles/install.sh
 ```
