@@ -1,3 +1,7 @@
+echo "👨‍🔧 Installing packages using pacman..."
+sudo pacman -S kitty ttf-jetbrains-mono-nerd zsh fzf zoxide nvim eza fastfetch
+echo ""
+
 echo "🔗 Linking dotfiles..."
 rm -rf ~/.p10k.zsh.bak && mv ~/.p10k.zsh{,.bak}
 rm -rf ~/.zshrc.bak && mv ~/.zshrc{,.bak}
