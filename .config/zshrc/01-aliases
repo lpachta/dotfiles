@@ -4,3 +4,11 @@ alias backup='~/my_dotfiles/.config/zshrc/backup.sh'
 alias ll='eza -al --icons=always'
 alias la='eza -a --icons=always'
 alias l='eza --icons=always'
+
+alias vi='nvim'
+alias vim='nvim'
+
+alias cd='z'
+
+alias fetch='fastfetch'
+alias neofetch='fastfetch'

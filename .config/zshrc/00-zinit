@@ -61,3 +61,6 @@ if [[ ! -f ~/.p10k.zsh ]]; then
 fi
 
 source ~/.p10k.zsh
+
+
+eval "$(zoxide init zsh)"   # or zsh
