@@ -1,0 +1,4 @@
+export PATH="$HOME/.local/share/flutter/flutter/bin:$PATH"
+export CHROME_EXECUTABLE=/usr/bin/google-chrome-stable
+export PATH="$PATH":"$HOME/.pub-cache/bin"
+export ANDROID_HOME="$HOME/Android/"
